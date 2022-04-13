@@ -1,0 +1,38 @@
+* {
+  /* border: 1px solid red; */
+  background-color: aliceblue;
+}
+
+.wrapper {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.title {
+  text-align: left;
+}
+
+input {
+  position: relative;
+  margin: 20px;
+  padding-left: 10px;
+  width: 400px;
+  height: 25px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid grey;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  position: relative;
+  margin: 8px;
+  width: 100px;
+}
