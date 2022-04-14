@@ -23,7 +23,7 @@ function Login() {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={handleClose}>Login</button>
+          <button className="dark" onClick={handleClose}>Login</button>
         </Modal.Footer>
       </Modal>
     </>

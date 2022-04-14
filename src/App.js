@@ -1,15 +1,15 @@
-import Main from "./Components/MainPage";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Landing from "./Components/Landing";
+import Main from "./Components/MainPage";
 
 function App() {
   return (
     <>
-      {/* <Main /> */}
+      <Main />
       {/* <Login /> */}
       {/* <Signup /> */}
-      <Landing />
+      {/* <Landing /> */}
     </>
   );
 }

@@ -26,13 +26,7 @@ input:focus {
   border-color: black;
 }
 
-button {
-  border-radius: 5px;
-  margin: 8px;
-  width: 100px;
-}
-
-button:hover {
-  background-color: rgb(215, 212, 255);
-  transition: ease 0.175s;
+.dark {
+  color: #7a7a7a;
+  border-color: #7a7a7a;
 }

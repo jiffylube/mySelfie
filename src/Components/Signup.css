@@ -24,16 +24,3 @@ input:focus {
   outline: none;
   border-color: black;
 }
-
-button {
-  cursor: pointer;
-  position: relative;
-  border-radius: 5px;
-  margin: 8px;
-  width: 100px;
-}
-
-button:hover {
-  background-color: rgb(215, 212, 255);
-  transition: ease 0.175s;
-}

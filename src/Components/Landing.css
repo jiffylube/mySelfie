@@ -36,7 +36,7 @@
   width: 50%;
 }
 
-.button {
+button {
   padding: 0.7em 3em;
   border: 3px solid #ffffff;
   font-size: 24px;
@@ -48,11 +48,11 @@
   text-align: center;
   transition: all 0.15s;
 }
-.button:hover {
+button:hover {
   color: #dddddd;
   border-color: #dddddd;
 }
-.button:active {
+button:active {
   color: #bbbbbb;
   border-color: #bbbbbb;
 }
