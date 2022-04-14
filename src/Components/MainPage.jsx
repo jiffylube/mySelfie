@@ -22,8 +22,17 @@ function Main() {
 
   return (
     <div className="wrapper">
-      <video className="webcam" ref={videoRef} autoPlay muted></video>
-      <button className="capture">Capture</button>
+      <div className="left">
+        <video className="webcam" ref={videoRef} autoPlay muted></video>
+        <button className="capture">Capture</button>
+      </div>
+      <div className="right">
+        <div className="snaps">
+          <div className="snap"></div>
+          <div className="snap"></div>
+          <div className="snap"></div>
+        </div>
+      </div>
     </div>
   );
 }
