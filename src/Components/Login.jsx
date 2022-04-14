@@ -1,36 +1,24 @@
 import "./Login.css"
-import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 
 function Login() {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const modalRef = useRef(null)
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  // function setShow() {
+  //   modalRef.current.style.display = 
+  // }
 
 
   return (
     <>
-      <button className="loginButtons" onClick={handleShow}>Login</button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header>Login</Modal.Header>
-        <Modal.Body>
-          <form>
-            <input id="Username" placeholder="User name" />
-            <input type="Password" placeholder="Password" />
-            <div className="CreateAccount">sign up</div>
-          </form>
-        </Modal.Body>
-        <Modal.Footer>
-          <button className="loginButtons" onClick={handleClose}>Login</button>
-          <button className="loginButtons" onClick={handleClose}>Test button - move to Main</button>
-        </Modal.Footer>
-      </Modal>
     </>
-  );
+  )
 };
 
 export default Login;
