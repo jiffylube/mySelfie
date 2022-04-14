@@ -22,6 +22,7 @@ input:hover {
 
 input:focus {
   outline: none;
+  border-color: black;
 }
 
 button {
