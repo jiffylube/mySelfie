@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       {/* <Main /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <Signup /> */}
       {/* <Landing /> */}
     </>
