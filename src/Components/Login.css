@@ -1,0 +1,42 @@
+* {
+  /* border: 1px solid red; */
+  background-color: aliceblue;
+}
+
+/* form {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+} */
+
+input {
+  position: relative;
+  border-color: rgb(203, 203, 203);
+  margin: 20px;
+  padding-left: 10px;
+  width: 350px;
+  height: 25px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid grey;
+}
+
+input:hover {
+  border-color: black;
+  transition: ease .5s;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border-radius: 5px;
+  margin: 8px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: rgb(215, 212, 255);
+  transition: ease .175s;
+}

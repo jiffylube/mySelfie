@@ -1,8 +1,8 @@
 import "./App.css";
 // import faceapi from "face-api.js";
 // import Main from "./Components/MainPage";
-// import Login from "./Components/Login/Login";
-// import Signup from "./Components/Signup/Signup";
+// import Login from "./Components/Login";
+// import Signup from "./Components/Signup";
 
 function App() {
 
