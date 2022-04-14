@@ -4,13 +4,6 @@ function Main() {
 
   const videoRef = useRef(null);
 
-  // Promise.all([
-  //   faceapi.nets.tnyFaceDetector.loadFromUri("/models"),
-  //   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-  //   faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-  //   faceapi.nets.faceExpressionNet.loadFromUri("/models"),
-  // ]);
-
   function startVideo() {
     navigator.mediaDevices
       .getUserMedia({ video: {} })
