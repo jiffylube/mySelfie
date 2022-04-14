@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent !important;
+}
+
+.capture {
+  padding: 0.7em 3em;
+  border: 3px solid #ffffff;
+  font-size: 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: Transparent;
+  text-align: center;
+  transition: all 0.15s;
+}
+.capture:hover {
+  color: #dddddd;
+  border-color: #dddddd;
+}
+.capture:active {
+  color: #bbbbbb;
+  border-color: #bbbbbb;
+}
+
+.webcam {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+  margin: 0 auto;
+}
