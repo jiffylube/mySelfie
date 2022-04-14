@@ -1,13 +1,16 @@
 import "./App.css";
 import Main from "./Components/MainPage";
-import Landing from "./Components/Landing";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
 
 function App() {
+
   return (
-    <div className="App">
+    <>
       {/* <Main /> */}
-      <Landing />
-    </div>
+      {/* <Login /> */}
+      {/* <Signup /> */}
+    </>
   );
 }
 
