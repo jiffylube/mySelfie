@@ -12,7 +12,7 @@ function Login() {
 
   return (
     <>
-      <button onClick={handleShow}>Login</button>
+      <button className="customButton" onClick={handleShow}>Login</button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>Login</Modal.Header>
@@ -23,7 +23,7 @@ function Login() {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={handleClose}>Login</button>
+          <button className="customButton" onClick={handleClose}>Login</button>
         </Modal.Footer>
       </Modal>
     </>

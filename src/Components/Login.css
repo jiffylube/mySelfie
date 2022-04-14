@@ -1,13 +1,6 @@
-* {
-  /* border: 1px solid red; */
-  background-color: aliceblue;
+form {
+  margin: auto;
 }
-
-/* form {
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: column;
-} */
 
 input {
   position: relative;
@@ -28,15 +21,18 @@ input:hover {
 
 input:focus {
   outline: none;
+  border-color: black;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
 }
 
-button {
+.customButton {
+  border: 1px solid black;
   border-radius: 5px;
   margin: 8px;
   width: 100px;
 }
 
-button:hover {
+.customButton:hover {
   background-color: rgb(215, 212, 255);
   transition: ease .175s;
 }
