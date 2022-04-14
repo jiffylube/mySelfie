@@ -1,3 +1,4 @@
+import "./MainPage.css"
 import { useRef } from "react";
 
 function Main() {
@@ -13,15 +14,16 @@ function Main() {
         video.play();
       })
       .catch((err) => {
-        console.err("error", err);
+        console.log("error", err);
       });
   }
 
   startVideo();
 
   return (
-    <div className="App">
-      <div><video ref={videoRef} autoPlay muted></video></div>
+    <div className="wrapper">
+      <video className="webcam" ref={videoRef} autoPlay muted></video>
+      <button className="capture">Capture</button>
     </div>
   );
 }
