@@ -1,4 +1,5 @@
 import "./Landing.css"
+import Login from "./Login"
 
 function Landing() {
 
@@ -8,7 +9,7 @@ function Landing() {
         <div className="title">Placeholder</div>
         <div className="buttons">
           <button className="signup button">Sign Up</button>
-          <button className="button">Login</button>
+          <Login />
         </div>
       </div>
       <div className="lower">
@@ -22,7 +23,7 @@ function Landing() {
         </div>
         <div className="info">
           <div className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
           <div className="creator">
             Made by Jeff, Rodrigo, and Eric - View on <a href="https://github.com/">Github</a>

@@ -16,7 +16,7 @@ function Signup() {
         <input type="Password" placeholder="Password" />
         <input type="Password" placeholder="Confirm Password" />
         {/* <input type="Backend" placeholder="Backend" /> */}
-        <button>Submit</button>
+        <button className="signInButtons">Submit</button>
       </form>
     </div>
   )
