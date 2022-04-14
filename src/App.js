@@ -6,7 +6,7 @@ import Main from "./Components/MainPage";
 function App() {
   return (
     <>
-      <Main />
+      {/* <Main /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
       {/* <Landing /> */}
