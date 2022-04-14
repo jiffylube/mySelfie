@@ -6,11 +6,10 @@ import Landing from "./Components/Landing";
 function App() {
   return (
     <>
-      <Landing/>
+      {/* <Landing/> */}
       {/* <Main /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
-      <Landing />
     </>
   );
 }
