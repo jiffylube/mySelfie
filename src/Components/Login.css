@@ -2,6 +2,7 @@ form {
   margin: auto;
 }
 
+
 input {
   position: relative;
   border-color: rgb(203, 203, 203);
@@ -16,7 +17,7 @@ input {
 
 input:hover {
   border-color: black;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 input:focus {
@@ -39,5 +40,5 @@ input:focus {
 
 .loginButtons:hover {
   background-color: rgb(215, 212, 255);
-  transition: ease .175s;
+  transition: ease 0.175s;
 }
