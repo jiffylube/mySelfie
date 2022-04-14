@@ -3,20 +3,23 @@ import { useRef, useState } from "react";
 
 
 function Login() {
-  // const [show, setShow] = useState(false);
-
-  // const modalRef = useRef(null)
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-
-  // function setShow() {
-  //   modalRef.current.style.display = 
-  // }
-
 
   return (
     <>
+      <div className="modal">
+        <div className="modalContent">
+          <div className="modal-header">
+            <h2>Sign in</h2>
+          </div>
+          <form className="modal-body">
+            <input placeholder="UserName"></input>
+            <input placeholder="Password"></input>
+          </form>
+          <div className="modal-footer">
+            <button>Login</button>
+          </div>
+        </div>
+      </div>
     </>
   )
 };
