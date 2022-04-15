@@ -1,10 +1,10 @@
 import "./Signup.css"
 import { Link } from "react-router-dom"
-
-// add onSubmit to form tag
-// prvent default form behavior
+import axios from "axios";
 
 function Signup() {
+
+  const url = 'https://backend-fr.herokuapp.com/api/users'
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,6 +15,36 @@ function Signup() {
     let password = e.target[3].value;
 
     console.log(fname, lname, email, password);
+
+    // axios stuff
+    let emailArray = [];
+
+    axios.get(url)
+      .then((results) => {
+        results.data.forEach((user) => {
+          emailArray.push(user.email)
+        })
+      })
+      .then(() => {
+        if (!emailArray.includes(email)) {
+          axios.post(url, {
+            email: email,
+            firstname: fname,
+            lastname: lname,
+            password: password,
+          })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          alert('Account Created');
+        }
+        else {
+          console.log("account exists")
+        }
+      })
   }
 
   return (
