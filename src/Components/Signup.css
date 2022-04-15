@@ -2,12 +2,12 @@
   padding: 20px;
 }
 
-form {
+.signUpForm {
   display: flex;
   flex-direction: column;
 }
 
-input {
+.signUpInput {
   position: relative;
   border-color: rgb(203, 203, 203);
   background-color: rgba(255, 221, 161, 1);
@@ -20,7 +20,7 @@ input {
   border-left: 1px solid grey;
 }
 
-input:hover {
+.signUpInput:hover {
   border-color: black;
   transition: ease 0.5s;
 }
@@ -34,13 +34,15 @@ input:focus {
 .signInButtons {
   border: 1px solid black;
   cursor: pointer;
-  position: relative;
+  color: black;
+  border: solid black;
   border-radius: 5px;
   margin: 8px;
-  width: 100px;
 }
 
 .signInButtons:hover {
   background-color: rgb(215, 212, 255);
+  color: black;
+  border: solid black;
   transition: ease 0.175s;
 }
