@@ -1,4 +1,6 @@
 import "./Signup.css"
+import { Link, Routes, Route } from "react-router-dom"
+import Landing from "./Landing"
 
 // add onSubmit to form tag
 // prvent default form behavior
@@ -16,7 +18,9 @@ function Signup() {
         <input className="signUpInput" type="Password" placeholder="Password" />
         <input className="signUpInput" type="Password" placeholder="Confirm Password" />
         {/* <input type="Backend" placeholder="Backend" /> */}
-        <button className="signInButtons">Submit</button>
+        <Link to={"/"} className="login button">
+              <button>Submit</button>
+        </Link>
       </form>
     </div>
   )

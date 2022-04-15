@@ -7,11 +7,9 @@ import { Routes, Route, Link } from "react-router-dom";
 function Landing() {
 
   return (
-    <Route path="/">
       <div className="landing-page">
         <div className="nav">
           <div className="title">Placeholder</div>
-
           <div className="buttons">
             <Link to={"/signup"}>
               <button className="signup button">Sign Up</button>
@@ -26,8 +24,8 @@ function Landing() {
               <Route path="/signup" element={<Signup />} />
             </Routes>
           </div>
-
         </div>
+
         <div className="lower">
           <div className="gallery">
             <div className="sample-face"></div>
@@ -47,7 +45,6 @@ function Landing() {
           </div>
         </div>
       </div>
-    </Route>
   )
 }
 
