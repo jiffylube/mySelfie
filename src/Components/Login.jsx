@@ -12,11 +12,11 @@ function Login() {
             <h2>Sign in</h2>
           </div>
           <form className="modal-body">
-            <input placeholder="UserName"></input>
-            <input placeholder="Password"></input>
+            <input className="inputBox" placeholder="UserName"></input>
+            <input className="inputBox" type="password" placeholder="Password"></input>
           </form>
           <div className="modal-footer">
-            <button>Login</button>
+            <button className="loginButton">Login</button>
           </div>
         </div>
       </div>

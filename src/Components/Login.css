@@ -19,7 +19,7 @@
   width: 80%;
 }
 
-form {
+.modal-body {
   margin: auto;
 }
 
@@ -36,12 +36,12 @@ input {
   border-left: 1px solid grey;
 }
 
-input:hover {
+.inputBox:hover {
   border-color: black;
   transition: ease 0.5s;
 }
 
-input:focus {
+.inputBox:focus {
   outline: none;
   border-color: black;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
@@ -52,14 +52,18 @@ input:focus {
   text-align: right;
 }
 
-.loginButtons {
+.loginButton {
   border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  border: solid black;
   border-radius: 5px;
   margin: 8px;
-  width: 100px;
 }
 
-.loginButtons:hover {
+.loginButton:hover {
   background-color: rgb(215, 212, 255);
+  color: black;
+  border: solid black;
   transition: ease 0.175s;
 }
