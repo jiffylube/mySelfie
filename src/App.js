@@ -9,15 +9,12 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />}/>
-        {/* <Route><Main /></Route>
-        <Route><Login /></Route>
-        <Route><Signup /></Route> */}
+          <Route path="/" element={<Landing />} />
+          <Route path="/mainpage" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
-      {/* <Main /> */}
-      {/* <Login /> */}
-      {/* <Signup /> */}
     </>
   );
 }
