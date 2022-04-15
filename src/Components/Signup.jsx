@@ -1,30 +1,37 @@
 import "./Signup.css"
-import { Link, Routes, Route } from "react-router-dom"
-import Landing from "./Landing"
+import { Link } from "react-router-dom"
 
 // add onSubmit to form tag
 // prvent default form behavior
 
 function Signup() {
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    //this format pulls values from form inputs
+    let fname = e.target[0].value;
+    let lname = e.target[1].value;
+    let email = e.target[2].value;
+    let password = e.target[3].value;
+
+    console.log(fname, lname, email, password);
+  }
+
   return (
     <div className="wrapper">
-      <form className="signUpForm">
-        <h1 className="title"> Sign up </h1>
+      <h1 className="title"> Sign up </h1>
+      <form className="signUpForm" onSubmit={handleSubmit}>
         <input className="signUpInput" id="Firstname" placeholder="First name" />
         <input className="signUpInput" id="Lastname" placeholder="Last name" />
         <input className="signUpInput" type="Email" placeholder="Email" />
-        {/* <input id="Username" placeholder="User name" /> */}
         <input className="signUpInput" type="Password" placeholder="Password" />
-        <input className="signUpInput" type="Password" placeholder="Confirm Password" />
-        {/* <input type="Backend" placeholder="Backend" /> */}
-        <Link to={"/"} className="login button">
+        <input type="submit"></input>
+        {/* <Link to={"/"} className="login button">
               <button>Submit</button>
-        </Link>
+        </Link> */}
       </form>
     </div>
   )
-
 }
 
 export default Signup
