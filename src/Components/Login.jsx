@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 
-function Login({setCurrentEmail}) {
+function Login({ setCurrentEmail }) {
 
 
   let accounts = [];
@@ -16,18 +16,16 @@ function Login({setCurrentEmail}) {
 
     e.preventDefault();
 
-      let email = e.target[0].value;
-      let password = e.target[1].value;
-      let match = false;
+    let email = e.target[0].value;
+    let password = e.target[1].value;
+    let match = false;
 
-      // get all accounts from api
-      axios.get("https://backend-fr.herokuapp.com/api/users")
-        .then((results) => {
-          results.data.forEach((user) => {
-            accounts.push(user)
-          })
+    // get all accounts from api
+    axios.get("https://backend-fr.herokuapp.com/api/users")
+      .then((results) => {
+        results.data.forEach((user) => {
+          accounts.push(user)
         })
-
       })
       // see if email is in the users database
       .then(() => {
@@ -40,7 +38,7 @@ function Login({setCurrentEmail}) {
               console.log("valid account")
               match = true;
               navigate("/mainpage");
-
+            }
             }
           })
           if (!match) {
