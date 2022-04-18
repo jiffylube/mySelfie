@@ -4,7 +4,10 @@ import { useNavigate, Link, Routes, Route } from 'react-router-dom';
 import Main from "./MainPage"
 import axios from "axios";
 
-function Login() {
+
+
+function Login({setCurrentEmail}) {
+
 
   let accounts = [];
   let navigate = useNavigate();
@@ -24,17 +27,20 @@ function Login() {
             accounts.push(user)
           })
         })
-        // see if email is in the users database
-        .then(() => {
-          accounts.forEach((account) => {
-            // if email matches, check if password matches
-            if (email === account.email) {
-              if (password === account.password) {
-                // if password matches, redirect to main page
-                console.log("valid account")
-                match = true;
-                navigate("/mainpage");
-              }
+
+      })
+      // see if email is in the users database
+      .then(() => {
+        accounts.forEach((account) => {
+          // if email matches, check if password matches
+          if (email === account.email) {
+            if (password === account.password) {
+              // if password matches, redirect to main page
+              setCurrentEmail(email)
+              console.log("valid account")
+              match = true;
+              navigate("/mainpage");
+
             }
           })
           if (!match) {

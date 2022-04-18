@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react"
 import './Faceapi.css'
 
 // Function
-function Faceapi() {
+function Faceapi({currentEmail}) {
   const videoRef = useRef(null);
   const photoRef = useRef(null);
   const [hasPhoto, setHasPhoto] = useState(false);
@@ -42,6 +42,10 @@ function Faceapi() {
     ctx.drawImage(video, 0, 0, width, height);
     setHasPhoto(true);
   }
+
+  useEffect(() => {
+    console.log(currentEmail);
+  })
 
   return (
     <div>

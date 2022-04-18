@@ -4,15 +4,19 @@ import Landing from "./Components/Landing";
 import Faceapi from "./Components/Faceapi";
 // import Main from "./Components/MainPage";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { useState } from "react"
 
 function App() {
+  // Create a lifting state
+  const [currentEmail, setCurrentEmail] = useState(null);
+
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/mainpage" element={<Faceapi />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/mainpage" element={<Faceapi currentEmail={currentEmail} />} />
+          <Route path="/login" element={<Login setCurrentEmail={setCurrentEmail} />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
