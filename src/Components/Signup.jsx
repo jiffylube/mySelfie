@@ -1,10 +1,11 @@
 import "./Signup.css"
+import { Link, useNavigate } from "react-router-dom"
 // import "./SignupTEST.css"
-import { Link } from "react-router-dom"
 import axios from "axios";
 
 function Signup() {
 
+  let navigate = useNavigate();
   const url = 'https://backend-fr.herokuapp.com/api/users'
 
   function handleSubmit(e) {
@@ -15,9 +16,6 @@ function Signup() {
     let email = e.target[2].value;
     let password = e.target[3].value;
 
-    console.log(fname, lname, email, password);
-
-    // axios stuff
     let emailArray = [];
 
     axios.get(url)
@@ -27,7 +25,8 @@ function Signup() {
         })
       })
       .then(() => {
-        if (!emailArray.includes(email)) {
+        if (!emailArray.includes(email) && ![fname, lname, email, password].includes(null)) {
+          // create new user object
           axios.post(url, {
             email: email,
             firstname: fname,
@@ -36,14 +35,13 @@ function Signup() {
           })
             .then(function (response) {
               console.log(response);
+              alert('Account Created');
+              navigate('/');
             })
             .catch(function (error) {
               console.log(error);
             });
-          alert('Account Created');
-        }
-        else {
-          console.log("account exists")
+          // redirect to landing page
         }
       })
   }
