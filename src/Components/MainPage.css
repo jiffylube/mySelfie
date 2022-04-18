@@ -1,15 +1,19 @@
-.wrapper {
+* {
+  border: 1px solid red;
+}
+
+.wrapperMain {
   display: flex;
 }
 
-.left {
+.leftMain {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 65vw;
 }
 
-.capture {
+.captureMain {
   padding: 0.7em 3em;
   width: 300px;
   border: 3px solid #ffffff;
@@ -22,30 +26,34 @@
   text-align: center;
   transition: all 0.15s;
 }
-.capture:hover {
+
+.captureMain:hover {
   color: #dddddd;
   border-color: #dddddd;
 }
-.capture:active {
+
+.captureMain:active {
   color: #bbbbbb;
   border-color: #bbbbbb;
 }
 
-.webcam {
+.webcamMain {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
-  -moz-transform: rotateY(180deg); /* Firefox */
+  -webkit-transform: rotateY(180deg);
+  /* Safari and Chrome */
+  -moz-transform: rotateY(180deg);
+  /* Firefox */
   height: 540px;
   width: 720px;
   border: 3px solid #ffffff;
 }
 
-.snaps {
+.snapsMain {
   display: flex;
   flex-direction: column;
 }
 
-.snap {
+.snapMain {
   height: 200px;
   width: 300px;
   border: 2px solid white;

@@ -1,5 +1,6 @@
 .modal {
   /* display: none; */
+  font-family: "Roboto", sans-serif;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -23,7 +24,7 @@
   margin: auto;
 }
 
-input {
+.inputBox {
   position: relative;
   border-color: rgb(203, 203, 203);
   background-color: rgba(255, 221, 161, 1);

@@ -1,5 +1,6 @@
 import "./Signup.css"
 import { Link, useNavigate } from "react-router-dom"
+// import "./SignupTEST.css"
 import axios from "axios";
 
 function Signup() {
@@ -47,13 +48,16 @@ function Signup() {
 
   return (
     <div className="wrapper">
-      <h1 className="title"> Sign up </h1>
+      <div className="formHeader">
+        <p className="title"> Sign up </p>
+        <p className="titleText">It's quick and easy.</p>
+      </div>
       <form className="signUpForm" onSubmit={handleSubmit}>
         <input className="signUpInput" id="Firstname" placeholder="First name" />
         <input className="signUpInput" id="Lastname" placeholder="Last name" />
-        <input className="signUpInput" type="Email" placeholder="Email" />
-        <input className="signUpInput" type="Password" placeholder="Password" />
-        <input type="submit"></input>
+        <input className="signUpInput" type="Email" placeholder="Email - this will be your login" />
+        <input className="signUpInput" type="Password" placeholder="New password" />
+        <input className="signUpButton" type="submit" value="Submit" />
         {/* <Link to={"/"} className="login button">
               <button>Submit</button>
         </Link> */}
