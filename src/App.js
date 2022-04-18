@@ -8,7 +8,6 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <Faceapi /> */}
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
