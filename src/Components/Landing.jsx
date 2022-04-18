@@ -1,4 +1,5 @@
 import "./Landing.css";
+import "./media.css";
 import Login from "./Login";
 import Signup from "./Signup";
 import { Routes, Route, Link } from "react-router-dom";
