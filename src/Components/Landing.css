@@ -1,10 +1,12 @@
 .landing-page {
   background: rgb(255, 221, 161);
-  background: linear-gradient(0deg,
-      rgba(255, 221, 161, 1) 0%,
-      rgba(255, 209, 81, 1) 34%,
-      rgba(237, 178, 48, 1) 70%,
-      rgba(238, 139, 69, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 221, 161, 1) 0%,
+    rgba(255, 209, 81, 1) 34%,
+    rgba(237, 178, 48, 1) 70%,
+    rgba(238, 139, 69, 1) 100%
+  );
   width: 100vw;
   height: 100vh;
   font-family: "Roboto", sans-serif;
@@ -22,15 +24,13 @@
 .title {
   font-size: 70px;
   color: #ffffff;
-}
-
-.signup {
-  margin-right: 40px;
+  letter-spacing: 4px;
 }
 
 .buttons {
   display: flex;
   justify-content: flex-end;
+  justify-content: space-evenly;
   width: 50%;
 }
 
@@ -45,7 +45,7 @@
   background-color: Transparent;
   text-align: center;
   transition: all 0.15s;
-  margin: 1em;
+  /* margin: 1em; */
   cursor: pointer;
 }
 
@@ -79,6 +79,7 @@
 
 .sample-face {
   border: 2px solid #ffffff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
 }
 
 .info {
@@ -98,4 +99,36 @@
 
 .creator {
   color: #854d04;
+}
+
+.webcam1 {
+  background-image: url("../../public/webcam1.jpeg");
+  background-position: center top;
+}
+
+.webcam2 {
+  background-image: url("../../public/webcam2.jpeg");
+  background-position: center top;
+}
+
+.webcam3 {
+  background-image: url("../../public/webcam3.jpeg");
+  background-position: center top;
+}
+
+.webcam4 {
+  background-image: url("../../public/webcam4.jpeg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.webcam5 {
+  background-image: url("../../public/webcam5.jpeg");
+  background-position: center top;
+}
+
+.webcam6 {
+  background-image: url("../../public/webcam6.jpeg");
+  background-position: center top;
 }
