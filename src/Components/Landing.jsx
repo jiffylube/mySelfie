@@ -28,12 +28,12 @@ function Landing() {
 
       <div className="lower">
         <div className="gallery">
-          <div className="sample-face"></div>
-          <div className="sample-face"></div>
-          <div className="sample-face"></div>
-          <div className="sample-face"></div>
-          <div className="sample-face"></div>
-          <div className="sample-face"></div>
+          <div className="sample-face webcam1"></div>
+          <div className="sample-face webcam2"></div>
+          <div className="sample-face webcam3"></div>
+          <div className="sample-face webcam4"></div>
+          <div className="sample-face webcam5"></div>
+          <div className="sample-face webcam6"></div>
         </div>
         <div className="info">
           <div className="description">
