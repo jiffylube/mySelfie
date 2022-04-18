@@ -1,3 +1,4 @@
+import "./Login.css"
 import { useRef, useState } from "react";
 import { useNavigate, Link, Routes, Route } from 'react-router-dom';
 import Main from "./MainPage"
@@ -46,18 +47,23 @@ function Login() {
   }
 
   return (
-    <>     
-      <div className="modal">
-        <div className="modalContent">
-          <div className="modal-header">
-            <h2>Sign in</h2>
-          </div>
-          <form className="modal-body" onSubmit={handleSubmit}>
-            <input className="inputBox" placeholder="UserName"></input>
-            <input className="inputBox" type="password" placeholder="Password"></input>
-            <input type="submit"></input>
-          </form>
+    <>
+      <div className="wrapper">
+        <div className="formHeader">
+          <p className="title">Log in</p>
         </div>
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <input className="loginInput" placeholder="UserName"></input>
+          <input className="loginInput" type="password" placeholder="Password"></input>
+
+          <input className="loginButton" type="submit" value="Login" />
+
+          {/* <Link to={"/mainpage"} className="loginButton">Login</Link> */}
+          <Routes>
+            <Route path="/mainpage" element={<Main />} />
+          </Routes>
+        </form>
+
       </div>
     </>
   )
