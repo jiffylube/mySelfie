@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, Routes, Route } from 'react-router-dom';
 import Main from "./MainPage"
 import axios from "axios";
 
@@ -13,6 +13,7 @@ function Login() {
 
     e.preventDefault();
 
+    // change to useState
     let email = e.target[0].value;
     let password = e.target[1].value;
     let match = false;
@@ -39,7 +40,7 @@ function Login() {
         })
         if (!match) {
           // otherwise say invalid username/pw
-          console.log("invalid username/password")
+          alert("invalid username/password")
         }
       })
   }
@@ -55,28 +56,8 @@ function Login() {
             <input className="inputBox" placeholder="UserName"></input>
             <input className="inputBox" type="password" placeholder="Password"></input>
             <input type="submit"></input>
-            {/* <Link to={"/mainpage"} className="login button">Login
-              <button className="login button">Login</button>
-            </Link>
-
-            <Routes>
-              <Route path="/mainpage" element={<Main />} />
-            </Routes> */}
-            {/* <button className="loginButton">Login</button> */}
           </form>
         </div>
-        <form className="signUpForm">
-          <input className="signUpInput" placeholder="UserName"></input>
-          <input className="signUpInput" type="password" placeholder="Password"></input>
-          <Link to={"/mainpage"} className="signUpButton">Login
-            {/* <button className="login button">Login</button> */}
-          </Link>
-
-          <Routes>
-            <Route path="/mainpage" element={<Main />} />
-          </Routes>
-          {/* <button className="loginButton">Login</button> */}
-        </form>
       </div>
     </>
   )
