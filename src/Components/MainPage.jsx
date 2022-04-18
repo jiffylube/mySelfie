@@ -1,9 +1,11 @@
 import "./MainPage.css"
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import * as faceapi from 'face-api.js'
 
 function Main() {
 
+  // Starting video
   const videoRef = useRef(null);
 
   function startVideo() {
@@ -21,6 +23,9 @@ function Main() {
 
   startVideo();
 
+  // Calling models to run in paralel
+  
+ 
   return (
     <div>
       <div>
