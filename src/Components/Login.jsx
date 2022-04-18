@@ -4,7 +4,7 @@ import Main from "./MainPage"
 import axios from "axios";
 
 
-function Login() {
+function Login({setCurrentEmail}) {
 
   let accounts = [];
   let navigate = useNavigate();
@@ -32,6 +32,7 @@ function Login() {
           if (email === account.email) {
             if (password === account.password) {
               // if password matches, redirect to main page
+              setCurrentEmail(email)
               console.log("valid account")
               match = true;
               navigate("/mainpage");
