@@ -1,13 +1,12 @@
 import "./Login.css"
-import { useRef, useState } from "react";
-import { useNavigate, Link, Routes, Route } from 'react-router-dom';
-import Main from "./MainPage"
+import { useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-
-
 
 function Login({ setCurrentEmail }) {
 
+  const usernameRef = useRef(null);
+  const passwordRef = useRef(null);
 
   let accounts = [];
   let navigate = useNavigate();
@@ -44,6 +43,9 @@ function Login({ setCurrentEmail }) {
           if (!match) {
             // otherwise say invalid username/pw
             console.log("invalid username/password")
+            // add invalid class to highlight inputs
+            usernameRef.current.className = "loginInput invalid"
+            passwordRef.current.className = "loginInput invalid"
           }
         })
   }
@@ -55,8 +57,8 @@ function Login({ setCurrentEmail }) {
           <p className="title">Log in</p>
         </div>
         <form className="loginForm" onSubmit={handleSubmit}>
-          <input className="loginInput" placeholder="Username"></input>
-          <input className="loginInput" type="password" placeholder="Password"></input>
+          <input className="loginInput" ref={usernameRef} placeholder="Username"></input>
+          <input className="loginInput" ref={passwordRef} type="password" placeholder="Password"></input>
           <input className="loginButton" type="submit"/>
         </form>
 

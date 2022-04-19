@@ -1,9 +1,11 @@
 // Importing dependencies
 import React, { useRef, useEffect, useState } from "react"
 import './MainPage.css'
+import axios from "axios"
 
 // Function
 function Faceapi({ currentEmail }) {
+  let current = new Date();
   const videoRef = useRef(null);
   const photoRef = useRef(null);
   const [hasPhoto, setHasPhoto] = useState(false);
@@ -42,6 +44,12 @@ function Faceapi({ currentEmail }) {
     let ctx = photo.getContext('2d');
     ctx.drawImage(video, 0, 0, width, height);
     setHasPhoto(true);
+
+    axios.post("https://backend-fr.herokuapp.com/api/expressions", {
+      datetime: current.toLocaleString(),
+      email: currentEmail
+    })
+    .then(res => console.log(res))
   }
 
   useEffect(() => {

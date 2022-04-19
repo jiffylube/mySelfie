@@ -1,6 +1,5 @@
 import "./Signup.css"
-import { Link, useNavigate } from "react-router-dom"
-// import "./SignupTEST.css"
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
 function Signup() {
@@ -36,12 +35,11 @@ function Signup() {
             .then(function (response) {
               console.log(response);
               alert('Account Created');
-              navigate('/');
+              navigate('/Login');
             })
             .catch(function (error) {
               console.log(error);
             });
-          // redirect to landing page
         }
       })
   }
@@ -58,9 +56,6 @@ function Signup() {
         <input className="signUpInput" type="Email" placeholder="Email - this will be your login" />
         <input className="signUpInput" type="Password" placeholder="New password" />
         <input className="signUpButton" type="submit" value="Submit" />
-        {/* <Link to={"/"} className="login button">
-              <button>Submit</button>
-        </Link> */}
       </form>
     </div>
   )

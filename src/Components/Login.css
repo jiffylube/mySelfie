@@ -71,3 +71,7 @@
   color: #bbbbbb;
   border-color: #bbbbbb;
 }
+
+.invalid {
+  border-color: red;
+}
