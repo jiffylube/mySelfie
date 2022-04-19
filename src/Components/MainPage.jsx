@@ -1,5 +1,6 @@
 // Importing dependencies
 import React, { useRef, useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import './MainPage.css'
 import axios from "axios"
 
@@ -9,6 +10,7 @@ function Faceapi({ currentEmail }) {
   const videoRef = useRef(null);
   const photoRef = useRef(null);
   const [hasPhoto, setHasPhoto] = useState(false);
+  let navigate = useNavigate();
 
   // Enable camera
   const getVideo = () => {
@@ -56,6 +58,10 @@ function Faceapi({ currentEmail }) {
     console.log(currentEmail);
   })
 
+  let exitApp = () => {
+    navigate("/");
+  }
+
   return (
     <div className="viewPort">
       <div className="camera">
@@ -64,7 +70,7 @@ function Faceapi({ currentEmail }) {
       </div>
       <div className={'result' + (hasPhoto ? 'hasPhoto' : '')}>
         <canvas className="theCanvas" ref={photoRef}></canvas>
-        <button className="pictureButton">CLOSE!</button>
+        <button className="pictureButton" onClick={exitApp}>CLOSE APP!</button>
       </div>
     </div>
   )

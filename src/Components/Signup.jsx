@@ -40,7 +40,6 @@ function Signup() {
           })
             .then(function (response) {
               console.log(response);
-              alert('Account Created');
               navigate('/Login');
             })
             .catch(function (error) {
