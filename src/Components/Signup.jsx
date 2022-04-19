@@ -1,8 +1,14 @@
 import "./Signup.css"
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
+import { useRef } from "react";
 
 function Signup() {
+
+  const firstnameRef = useRef(null)
+  const lastnameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
 
   let navigate = useNavigate();
   const url = 'https://backend-fr.herokuapp.com/api/users'
@@ -24,7 +30,7 @@ function Signup() {
         })
       })
       .then(() => {
-        if (!emailArray.includes(email) && ![fname, lname, email, password].includes(null)) {
+        if (!emailArray.includes(email) && fname && lname && email && password) {
           // create new user object
           axios.post(url, {
             email: email,
@@ -41,6 +47,16 @@ function Signup() {
               console.log(error);
             });
         }
+        else {
+          if (!fname)
+            firstnameRef.current.className = "signUpInput blank"
+          if (!lname)
+            lastnameRef.current.className = "signUpInput blank"
+          if (!email)
+            emailRef.current.className = "signUpInput blank"
+          if (!password)
+            passwordRef.current.className = "signUpInput blank"
+        }
       })
   }
 
@@ -51,10 +67,10 @@ function Signup() {
         <p className="titleText">It's quick and easy.</p>
       </div>
       <form className="signUpForm" onSubmit={handleSubmit}>
-        <input className="signUpInput" id="Firstname" placeholder="First name" />
-        <input className="signUpInput" id="Lastname" placeholder="Last name" />
-        <input className="signUpInput" type="Email" placeholder="Email - this will be your login" />
-        <input className="signUpInput" type="Password" placeholder="New password" />
+        <input className="signUpInput" id="Firstname" ref={firstnameRef} placeholder="First name" />
+        <input className="signUpInput" id="Lastname" ref={lastnameRef} placeholder="Last name" />
+        <input className="signUpInput" type="Email" ref={emailRef} placeholder="Email - this will be your login" />
+        <input className="signUpInput" type="Password" ref={passwordRef} placeholder="New password" />
         <input className="signUpButton" type="submit" value="Submit" />
       </form>
     </div>

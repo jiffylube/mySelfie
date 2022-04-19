@@ -71,3 +71,7 @@
   color: #bbbbbb;
   border-color: #bbbbbb;
 }
+
+.blank {
+  border-color: red;
+}
