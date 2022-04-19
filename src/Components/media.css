@@ -15,6 +15,10 @@
     flex-wrap: wrap;
   }
 
+  .title {
+    font-size: 65px;
+  }
+
   .landingButtons {
     font-size: 14px;
   }
@@ -43,7 +47,18 @@
 
 @media only screen and (max-width: 750px) {
   .info {
-    width: 80%;
+    width: 70%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .info {
+    width: 70%;
     height: 100%;
   }
 }

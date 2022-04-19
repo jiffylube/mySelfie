@@ -1,60 +1,82 @@
-/* * {
-  border: 1px solid red;
-} */
-
-.wrapperMain {
+.viewPort {
   display: flex;
+  flex-direction: row;
+  width: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
 }
 
-.leftMain {
+.camera {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 65vw;
+  flex-basis: 100%;
+  flex: 2.75;
 }
 
-.captureMain {
-  padding: 0.7em 3em;
-  width: 300px;
+.result {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.resulthasPhoto {
+  /* left: 0; */
+  flex: 1;
+}
+
+.theCanvas {
+  width: 95%;
+  height: 50%;
+  border: 6px solid #ffffff;
+  background-color: #ffffff;
+  background-position: center top;
+  margin-top: 10%;
+  padding-bottom: 60px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
+}
+
+/* video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+} */
+
+.displayArea {
+  width: 95%;
+  max-width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 2px 6px 2px rgb(0 0 0 / 15%);
+}
+
+
+.pictureButton {
+  padding: 0.7em;
   border: 3px solid #ffffff;
   font-size: 24px;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 400;
   color: #ffffff;
-  background-color: Transparent;
+  background-color: rgba(255, 221, 161, 1);
+  /* background-color: Transparent; */
   text-align: center;
   transition: all 0.15s;
+  margin: 1em;
+  cursor: pointer;
+  width: 65%;
 }
 
-.captureMain:hover {
-  color: #dddddd;
-  border-color: #dddddd;
+.pictureButton:hover {
+  color: rgba(237, 178, 48, 1);
+  border-color: rgba(237, 178, 48, 1);
+  transition: ease 0.175s;
 }
 
-.captureMain:active {
+.pictureButton:active {
   color: #bbbbbb;
   border-color: #bbbbbb;
-}
-
-.webcamMain {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  /* Safari and Chrome */
-  -moz-transform: rotateY(180deg);
-  /* Firefox */
-  height: 540px;
-  width: 720px;
-  border: 3px solid #ffffff;
-}
-
-.snapsMain {
-  display: flex;
-  flex-direction: column;
-}
-
-.snapMain {
-  height: 200px;
-  width: 300px;
-  border: 2px solid white;
 }
