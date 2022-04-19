@@ -1,8 +1,8 @@
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Landing from "./Components/Landing";
-import Faceapi from "./Components/Faceapi";
-// import Main from "./Components/MainPage";
+// import Faceapi from "./Components/Faceapi";
+import Faceapi from "./Components/MainPage";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { useState } from "react"
 
