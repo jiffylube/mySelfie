@@ -1,5 +1,5 @@
-import "./Landing.css";
-// import "./LandingTest.css";
+// import "./Landing.css";
+import "./LandingTest.css";
 import "./media.css";
 import Login from "./Login";
 import Signup from "./Signup";
