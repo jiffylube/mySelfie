@@ -28,5 +28,5 @@ Back end
 
 ### Potential Future Updates
 
-* adding feature for album
+* Adding feature for album
 * Integrating facial recognition for mood detections
