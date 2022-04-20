@@ -38,16 +38,16 @@ function Login({ setCurrentEmail }) {
               match = true;
               navigate("/mainpage");
             }
-            }
-          })
-          if (!match) {
-            // otherwise say invalid username/pw
-            console.log("invalid username/password")
-            // add invalid class to highlight inputs
-            usernameRef.current.className = "loginInput invalid"
-            passwordRef.current.className = "loginInput invalid"
           }
         })
+        if (!match) {
+          // otherwise say invalid username/pw
+          console.log("invalid username/password")
+          // add invalid class to highlight inputs
+          usernameRef.current.className = "loginInput invalid"
+          passwordRef.current.className = "loginInput invalid"
+        }
+      })
   }
 
   return (
@@ -57,9 +57,9 @@ function Login({ setCurrentEmail }) {
           <p className="title">Log in</p>
         </div>
         <form className="loginForm" onSubmit={handleSubmit}>
-          <input className="loginInput" ref={usernameRef} placeholder="Username"></input>
+          <input className="loginInput" ref={usernameRef} placeholder="Email"></input>
           <input className="loginInput" ref={passwordRef} type="password" placeholder="Password"></input>
-          <input className="loginButton" type="submit"/>
+          <input className="loginButton" type="submit" />
         </form>
 
       </div>

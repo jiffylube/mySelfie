@@ -51,7 +51,7 @@ function Faceapi({ currentEmail }) {
       datetime: current.toLocaleString(),
       email: currentEmail
     })
-    .then(res => console.log(res))
+      .then(res => console.log(res))
   }
 
   useEffect(() => {
